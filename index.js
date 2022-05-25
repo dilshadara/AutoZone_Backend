@@ -15,9 +15,15 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 async function run(){
     try{
         await client.connect();
-        
+        const reviewCollection=client.db('manufacturer').collection('review');
 
-        
+         //get all review
+         app.get('/review', async(req,res) =>{
+            const query = {};
+            const cursor = reviewCollection.find(query);
+            const reviews=await cursor.toArray();
+            res.send(reviews);
+        });
     }
     finally{
 
