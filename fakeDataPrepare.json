@@ -1,0 +1,68 @@
+[
+    {   
+        "name":"COLE HERSEE 200A CONTINUOUS SOLENOID",
+        "price":48.60,
+        "minimumOrderQuantity":5,
+        "availableQuantity":50,
+        "short-description":"A wheel might look like a single object, but it is made up of several parts. To understand a wheel, you must understand the parts of a wheel. Let’s get acquainted with the most important wheel parts by starting at the center of the wheel.",
+        "image":"https://i.ibb.co/2KYP30z/parts1.png"
+    },
+    {   
+        "name":"STANLEY 15AMP BATTERY CHARGER (BC50BS)",
+        "price":40.00,
+        "minimumOrderQuantity":10,
+        "availableQuantity":500,
+        "short-description":"The center bore is the opening that allows the wheel to fit on the axle. This is the part of the wheel that actually attaches the wheel to the vehicle and bears the weight of the vehicle. When you buy aftermarket wheels, you must ensure that the center bore is at least the size of the OEM wheel.",
+       
+        "image":"https://i.ibb.co/KhTsGNf/parts2.png"
+    },
+    {   
+        "name":"CAR & TRUCK STARTERS HIGH TORQUE STARTER",
+        "price":17,
+        "minimumOrderQuantity":5,
+        "availableQuantity":50,
+        "short-description":"A wheel might look like a single object, but it is made up of several parts. To understand a wheel, you must understand the parts of a wheel. Let’s get acquainted with the most important wheel parts by starting at the center of the wheel.",
+        "image":"https://i.ibb.co/CW8XcQC/parts3.png"
+    },
+    {   
+        "name":"PERFORMANCE TOOL W2998",
+        "price":390.60,
+        "minimumOrderQuantity":5,
+        "availableQuantity":50,
+        "short-description":"Brand:Graco, ASIN:B016484GM44, Item model number:1963212",
+        "image":"https://i.ibb.co/CW8XcQC/parts3.png"
+    },
+    {   
+        "name":"AIR COMPORESSOR HEAVY DUTY (12V)",
+        "price":110.60,
+        "minimumOrderQuantity":2,
+        "availableQuantity":10,
+        "short-description":"A wheel might look like a single object, but it is made up of several parts. To understand a wheel, you must understand the parts of a wheel. Let’s get acquainted with the most important wheel parts by starting at the center of the wheel.",
+        "image":"https://i.ibb.co/CW8XcQC/parts2.png"
+    },
+    {   
+        "name":"AUTOMATIC BATTERY CHARGER 800MA(NO-SB)",
+        "price":200,
+        "minimumOrderQuantity":5,
+        "availableQuantity":20,
+        "short-description":"A groundbreaking Retina display. Powerful dual-core and quad-core Intel processors. Fast flash storage. High-performance graphics. Great built-in apps. And now in the 13-inch model, a revolutionary new Force Touch trackpad and even longer battery life.",
+        "image":"https://i.ibb.co/CW8XcQC/parts1.png"
+    },
+    {   
+        "name":"COPY OF 1 SET COVER CAP FOR OIL FILTER HOUSING",
+        "price":150,
+        "minimumOrderQuantity":3,
+        "availableQuantity":50,
+        "short-description":"When you buy aftermarket wheels, you must ensure that the center bore is at least the size of the OEM wheel. This generally isn’t a problem as most manufacturers make wheels with a large center bore in order to fit as many vehicles as possible. ",
+        "image":"https://i.ibb.co/CW8XcQC/parts3.png"
+    },
+    {   
+        "name":"O-NEX LED RESISTOR KIT H11 (H8, H9)",
+        "price":450.60,
+        "minimumOrderQuantity":3,
+        "availableQuantity":15,
+        "short-description":"This generally isn’t a problem as most manufacturers make wheels with a large center bore in order to fit as many vehicles as possible. When the center bore is larger, hubcentric rings are used to fill the gap. Center caps will cover the center border style.",
+        "image":"https://i.ibb.co/CW8XcQC/parts2.png"
+    }
+    
+]
