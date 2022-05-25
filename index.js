@@ -16,6 +16,7 @@ async function run(){
     try{
         await client.connect();
         const reviewCollection=client.db('manufacturer').collection('review');
+        const toolsCollection=client.db('manufacturer').collection('parts');
 
          //get all review
          app.get('/review', async(req,res) =>{
@@ -31,6 +32,13 @@ async function run(){
             console.log('Adding new review', req.body);
             const result = await reviewCollection.insertOne(newReview);
             res.send(result);
+        });
+        //get all tools
+        app.get('/tools', async(req,res) =>{
+            const query = {};
+            const cursor = toolsCollection.find(query);
+            const tools=await cursor.toArray();
+            res.send(tools);
         });
     }
     finally{
