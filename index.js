@@ -17,6 +17,7 @@ async function run(){
         await client.connect();
         const reviewCollection=client.db('manufacturer').collection('review');
         const toolsCollection=client.db('manufacturer').collection('parts');
+        const userCollection=client.db('manufacturer').collection('users');
 
          //get all review
          app.get('/review', async(req,res) =>{
@@ -42,13 +43,30 @@ async function run(){
         });
 
         //get tools with id
-        app.get('/tools/:id', async(req,res) =>{
+        app.get('/tool/:id', async(req,res) =>{
             const id=req.params.id;
             const query={_id:ObjectId(id)};
             
             const tool=await toolsCollection.findOne(query);
             res.send(tool);
         });
+
+        //save/update user info
+        app.put('/user/:email',async(req,res)=>{
+            const email=req.params.email;
+            const user=req.body;
+            const filter={email:email};
+            const options = { upsert: true };
+
+            const updateDoc = {
+                $set: user,
+              };
+
+              const result = await userCollection.updateOne(filter, updateDoc, options);
+              res.send(result);
+        })
+
+
     }
     finally{
 
