@@ -18,6 +18,7 @@ async function run(){
         const reviewCollection=client.db('manufacturer').collection('review');
         const toolsCollection=client.db('manufacturer').collection('parts');
         const userCollection=client.db('manufacturer').collection('users');
+        const orderCollection=client.db('manufacturer').collection('orders');
 
          //get all review
          app.get('/review', async(req,res) =>{
@@ -30,10 +31,19 @@ async function run(){
          //add new review
          app.post('/review',async(req,res) =>{
             const newReview=req.body;
-            console.log('Adding new review', req.body);
+            // console.log('Adding new review', req.body);
             const result = await reviewCollection.insertOne(newReview);
             res.send(result);
         });
+
+        //add new tools
+        app.post('/tools',async(req,res) =>{
+            const newTools=req.body;
+            // console.log('Adding new review', req.body);
+            const result = await toolsCollection.insertOne(newTools);
+            res.send(result);
+        });
+
         //get all tools
         app.get('/tools', async(req,res) =>{
             const query = {};
@@ -74,10 +84,19 @@ async function run(){
             res.send(users);
         });
 
+        //get user with id
+        app.get('/user/:email', async(req,res) =>{
+            const email=req.params.email;
+            const query={email:email};
+            
+            const user=await userCollection.findOne(query);
+            res.send(user);
+        });
+
         //make admin
         app.put('/users/admin/:email',async(req,res)=>{
             const email=req.params.email;
-            console.log("email from app",email);
+            // console.log("email from app",email);
             const filter={email:email};
             const updateDoc = {
                 $set: {role:'admin'},
@@ -85,6 +104,14 @@ async function run(){
 
               const result = await userCollection.updateOne(filter, updateDoc);
               res.send(result);
+        });
+
+        //post order
+        app.post('/order',async(req,res) =>{
+            const newOrder=req.body;
+            // console.log('Adding new review', req.body);
+            const result = await orderCollection.insertOne(newOrder);
+            res.send(result);
         });
 
 
