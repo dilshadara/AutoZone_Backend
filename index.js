@@ -64,7 +64,15 @@ async function run(){
 
               const result = await userCollection.updateOne(filter, updateDoc, options);
               res.send(result);
-        })
+        });
+
+         //get all user info
+         app.get('/users', async(req,res) =>{
+            const query = {};
+            const cursor = userCollection.find(query);
+            const users=await cursor.toArray();
+            res.send(users);
+        });
 
 
     }
